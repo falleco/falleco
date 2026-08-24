@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="540" viewBox="0 0 1000 540" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1130" height="540" viewBox="0 0 1130 540" role="img" aria-labelledby="title desc">
   <title id="title">Israel Crisanto GitHub profile</title>
   <desc id="desc">Terminal-style profile card with GitHub statistics</desc>
   <style>
@@ -14,23 +14,408 @@
     .addColor { fill: #3fb950; }
     .delColor { fill: #f85149; }
     .cc { fill: #616e7f; }
+    .skull-frame {
+      opacity: 0;
+      animation: skull-frame-cycle 12s linear infinite;
+    }
+    .skull-frame-0 { opacity: 1; animation-delay: 0s; }
+    .skull-frame-1 { animation-delay: 0.5s; }
+    .skull-frame-2 { animation-delay: 1s; }
+    .skull-frame-3 { animation-delay: 1.5s; }
+    .skull-frame-4 { animation-delay: 2s; }
+    .skull-frame-5 { animation-delay: 2.5s; }
+    .skull-frame-6 { animation-delay: 3s; }
+    .skull-frame-7 { animation-delay: 3.5s; }
+    .skull-frame-8 { animation-delay: 4s; }
+    .skull-frame-9 { animation-delay: 4.5s; }
+    .skull-frame-10 { animation-delay: 5s; }
+    .skull-frame-11 { animation-delay: 5.5s; }
+    .skull-frame-12 { animation-delay: 6s; }
+    .skull-frame-13 { animation-delay: 6.5s; }
+    .skull-frame-14 { animation-delay: 7s; }
+    .skull-frame-15 { animation-delay: 7.5s; }
+    .skull-frame-16 { animation-delay: 8s; }
+    .skull-frame-17 { animation-delay: 8.5s; }
+    .skull-frame-18 { animation-delay: 9s; }
+    .skull-frame-19 { animation-delay: 9.5s; }
+    .skull-frame-20 { animation-delay: 10s; }
+    .skull-frame-21 { animation-delay: 10.5s; }
+    .skull-frame-22 { animation-delay: 11s; }
+    .skull-frame-23 { animation-delay: 11.5s; }
+    @keyframes skull-frame-cycle {
+      0%, 4.157% { opacity: 1; }
+      4.167%, 100% { opacity: 0; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .skull-frame { animation: none; opacity: 0; }
+      .skull-frame-0 { opacity: 1; }
+    }
     text, tspan { white-space: pre; }
   </style>
-  <rect width="1000" height="540" rx="15" fill="#161b22"/>
-  <text font-family="ConsolasFallback, Consolas, monospace" font-size="24" fill="#c9d1d9">
-<tspan x="41" y="122">⠀⠀⠀⠀⢀⣀⣤⣤⣤⣤⣄⡀⠀⠀⠀⠀</tspan>
-<tspan x="41" y="153">⠀⢀⣤⣾⣿⣾⣿⣿⣿⣿⣿⣿⣷⣄⠀⠀</tspan>
-<tspan x="41" y="184">⢠⣾⣿⢛⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⡀</tspan>
-<tspan x="41" y="215">⣾⣯⣷⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧</tspan>
-<tspan x="41" y="246">⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿</tspan>
-<tspan x="41" y="277">⣿⡿⠻⢿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠻⢿⡵</tspan>
-<tspan x="41" y="308">⢸⡇⠀⠀⠉⠛⠛⣿⣿⠛⠛⠉⠀⠀⣿⡇</tspan>
-<tspan x="41" y="339">⢸⣿⣀⠀⢀⣠⣴⡇⠹⣦⣄⡀⠀⣠⣿⡇</tspan>
-<tspan x="41" y="370">⠈⠻⠿⠿⣟⣿⣿⣦⣤⣼⣿⣿⠿⠿⠟⠀</tspan>
-<tspan x="41" y="401">⠀⠀⠀⠀⠸⡿⣿⣿⢿⡿⢿⠇⠀⠀⠀⠀</tspan>
-<tspan x="41" y="432">⠀⠀⠀⠀⠀⠀⠈⠁⠈⠁⠀⠀⠀⠀⠀⠀</tspan>
-  </text>
+  <rect width="1130" height="540" rx="15" fill="#161b22"/>
+  <g aria-label="Rotating ASCII skull">
+    <g class="skull-frame skull-frame-0">
+      <text font-family="ConsolasFallback, Consolas, monospace" font-size="24" text-anchor="middle" fill="#c9d1d9" fill-opacity="1.00">
+        <tspan x="220" y="122">⠀⠀⠀⠀⢀⣀⣤⣤⣤⣤⣄⡀⠀⠀⠀⠀</tspan>
+        <tspan x="220" y="153">⠀⢀⣤⣾⣿⣾⣿⣿⣿⣿⣿⣿⣷⣄⠀⠀</tspan>
+        <tspan x="220" y="184">⢠⣾⣿⢛⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⡀</tspan>
+        <tspan x="220" y="215">⣾⣯⣷⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧</tspan>
+        <tspan x="220" y="246">⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿</tspan>
+        <tspan x="220" y="277">⣿⡿⠻⢿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠻⢿⡵</tspan>
+        <tspan x="220" y="308">⢸⡇⠀⠀⠉⠛⠛⣿⣿⠛⠛⠉⠀⠀⣿⡇</tspan>
+        <tspan x="220" y="339">⢸⣿⣀⠀⢀⣠⣴⡇⠹⣦⣄⡀⠀⣠⣿⡇</tspan>
+        <tspan x="220" y="370">⠈⠻⠿⠿⣟⣿⣿⣦⣤⣼⣿⣿⠿⠿⠟⠀</tspan>
+        <tspan x="220" y="401">⠀⠀⠀⠀⠸⡿⣿⣿⢿⡿⢿⠇⠀⠀⠀⠀</tspan>
+        <tspan x="220" y="432">⠀⠀⠀⠀⠀⠀⠈⠁⠈⠁⠀⠀⠀⠀⠀⠀</tspan>
+      </text>
+    </g>
+<g class="skull-frame skull-frame-1">
+      <text font-family="ConsolasFallback, Consolas, monospace" font-size="24" text-anchor="middle" fill="#c9d1d9" fill-opacity="0.99">
+        <tspan x="220" y="122">⠀⠀⠀⠀⢀⣀⣤⣤⣤⣤⣄⡀⠀⠀⠀⠀</tspan>
+        <tspan x="220" y="153">⠀⢀⣤⣾⣿⣾⣿⣿⣿⣿⣿⣿⣷⣄⠀⠀</tspan>
+        <tspan x="220" y="184">⢠⣾⣿⢛⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⡀</tspan>
+        <tspan x="220" y="215">⣾⣯⣷⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧</tspan>
+        <tspan x="220" y="246">⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿</tspan>
+        <tspan x="220" y="277">⣿⡿⠻⢿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠻⢿⡵</tspan>
+        <tspan x="220" y="308">⢸⡇⠀⠀⠉⠛⠛⣿⣿⠛⠛⠉⠀⠀⣿⡇</tspan>
+        <tspan x="220" y="339">⢸⣿⣀⠀⢀⣠⣴⡇⠹⣦⣄⡀⠀⣠⣿⡇</tspan>
+        <tspan x="220" y="370">⠈⠻⠿⠿⣟⣿⣿⣦⣤⣼⣿⣿⠿⠿⠟⠀</tspan>
+        <tspan x="220" y="401">⠀⠀⠀⠀⠸⡿⣿⣿⢿⡿⢿⠇⠀⠀⠀⠀</tspan>
+        <tspan x="220" y="432">⠀⠀⠀⠀⠀⠀⠈⠁⠈⠁⠀⠀⠀⠀⠀⠀</tspan>
+      </text>
+    </g>
+<g class="skull-frame skull-frame-2">
+      <text font-family="ConsolasFallback, Consolas, monospace" font-size="24" text-anchor="middle" fill="#c9d1d9" fill-opacity="0.96">
+        <tspan x="220" y="122">⠀⠀⠀⢀⣀⣤⣤⣤⣄⡀⠀⠀⠀⠀</tspan>
+        <tspan x="220" y="153">⠀⢀⣤⣿⣾⣿⣿⣿⣿⣿⣷⣄⠀⠀</tspan>
+        <tspan x="220" y="184">⢠⣾⢛⣼⣿⣿⣿⣿⣿⣿⣿⣿⣷⡀</tspan>
+        <tspan x="220" y="215">⣾⣯⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧</tspan>
+        <tspan x="220" y="246">⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿</tspan>
+        <tspan x="220" y="277">⣿⡿⢿⣿⣿⣿⣿⣿⣿⣿⡿⠻⢿⡵</tspan>
+        <tspan x="220" y="308">⢸⡇⠀⠉⠛⠛⣿⠛⠛⠉⠀⠀⣿⡇</tspan>
+        <tspan x="220" y="339">⢸⣿⠀⢀⣠⣴⡇⣦⣄⡀⠀⣠⣿⡇</tspan>
+        <tspan x="220" y="370">⠈⠻⠿⣟⣿⣿⣤⣼⣿⣿⠿⠿⠟⠀</tspan>
+        <tspan x="220" y="401">⠀⠀⠀⠸⡿⣿⢿⡿⢿⠇⠀⠀⠀⠀</tspan>
+        <tspan x="220" y="432">⠀⠀⠀⠀⠀⠈⠈⠁⠀⠀⠀⠀⠀⠀</tspan>
+      </text>
+    </g>
+<g class="skull-frame skull-frame-3">
+      <text font-family="ConsolasFallback, Consolas, monospace" font-size="24" text-anchor="middle" fill="#c9d1d9" fill-opacity="0.92">
+        <tspan x="220" y="122">⠀⠀⠀⢀⣤⣤⣤⣄⡀⠀⠀⠀</tspan>
+        <tspan x="220" y="153">⠀⣤⣾⣿⣿⣿⣿⣿⣿⣄⠀⠀</tspan>
+        <tspan x="220" y="184">⢠⣿⢛⣿⣿⣿⣿⣿⣿⣿⣷⡀</tspan>
+        <tspan x="220" y="215">⣾⣷⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧</tspan>
+        <tspan x="220" y="246">⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿</tspan>
+        <tspan x="220" y="277">⣿⠻⢿⣿⣿⣿⣿⣿⣿⠻⢿⡵</tspan>
+        <tspan x="220" y="308">⢸⠀⠀⠛⠛⣿⠛⠛⠉⠀⣿⡇</tspan>
+        <tspan x="220" y="339">⢸⣀⠀⣠⣴⠹⣦⣄⠀⣠⣿⡇</tspan>
+        <tspan x="220" y="370">⠈⠿⠿⣿⣿⣤⣼⣿⠿⠿⠟⠀</tspan>
+        <tspan x="220" y="401">⠀⠀⠀⡿⣿⢿⡿⢿⠀⠀⠀⠀</tspan>
+        <tspan x="220" y="432">⠀⠀⠀⠀⠈⠈⠁⠀⠀⠀⠀⠀</tspan>
+      </text>
+    </g>
+<g class="skull-frame skull-frame-4">
+      <text font-family="ConsolasFallback, Consolas, monospace" font-size="24" text-anchor="middle" fill="#c9d1d9" fill-opacity="0.86">
+        <tspan x="220" y="122">⠀⠀⢀⣤⣤⣄⠀⠀⠀</tspan>
+        <tspan x="220" y="153">⠀⣤⣿⣿⣿⣿⣷⣄⠀</tspan>
+        <tspan x="220" y="184">⢠⣿⣼⣿⣿⣿⣿⣿⡀</tspan>
+        <tspan x="220" y="215">⣾⣷⣿⣿⣿⣿⣿⣿⣧</tspan>
+        <tspan x="220" y="246">⣿⣿⣿⣿⣿⣿⣿⣿⣿</tspan>
+        <tspan x="220" y="277">⣿⠻⣿⣿⣿⣿⡿⠻⡵</tspan>
+        <tspan x="220" y="308">⢸⠀⠉⠛⣿⠛⠀⣿⡇</tspan>
+        <tspan x="220" y="339">⢸⣀⢀⡇⠹⣄⠀⣿⡇</tspan>
+        <tspan x="220" y="370">⠈⠿⣿⣦⣼⣿⠿⠟⠀</tspan>
+        <tspan x="220" y="401">⠀⠀⡿⣿⡿⢿⠀⠀⠀</tspan>
+        <tspan x="220" y="432">⠀⠀⠀⠁⠁⠀⠀⠀⠀</tspan>
+      </text>
+    </g>
+<g class="skull-frame skull-frame-5">
+      <text font-family="ConsolasFallback, Consolas, monospace" font-size="24" text-anchor="middle" fill="#c9d1d9" fill-opacity="0.79">
+        <tspan x="220" y="122">⠀⠀⣤⣄⠀⠀</tspan>
+        <tspan x="220" y="153">⠀⣾⣿⣿⣷⠀</tspan>
+        <tspan x="220" y="184">⢠⢛⣿⣿⣿⡀</tspan>
+        <tspan x="220" y="215">⣾⣿⣿⣿⣿⣧</tspan>
+        <tspan x="220" y="246">⣿⣿⣿⣿⣿⣿</tspan>
+        <tspan x="220" y="277">⣿⣿⣿⣿⠻⡵</tspan>
+        <tspan x="220" y="308">⢸⠉⣿⠛⠀⡇</tspan>
+        <tspan x="220" y="339">⢸⢀⡇⣄⣠⡇</tspan>
+        <tspan x="220" y="370">⠈⣟⣦⣿⠿⠀</tspan>
+        <tspan x="220" y="401">⠀⠸⣿⢿⠀⠀</tspan>
+        <tspan x="220" y="432">⠀⠀⠁⠀⠀⠀</tspan>
+      </text>
+    </g>
+<g class="skull-frame skull-frame-6">
+      <text font-family="ConsolasFallback, Consolas, monospace" font-size="24" text-anchor="middle" fill="#c9d1d9" fill-opacity="0.72">
+        <tspan x="220" y="122">⠀⣤⠀</tspan>
+        <tspan x="220" y="153">⠀⣿⠀</tspan>
+        <tspan x="220" y="184">⢠⣿⡀</tspan>
+        <tspan x="220" y="215">⣾⣿⣧</tspan>
+        <tspan x="220" y="246">⣿⣿⣿</tspan>
+        <tspan x="220" y="277">⣿⣿⡵</tspan>
+        <tspan x="220" y="308">⢸⠛⡇</tspan>
+        <tspan x="220" y="339">⢸⣦⡇</tspan>
+        <tspan x="220" y="370">⠈⣼⠀</tspan>
+        <tspan x="220" y="401">⠀⡿⠀</tspan>
+        <tspan x="220" y="432">⠀⠁⠀</tspan>
+      </text>
+    </g>
+<g class="skull-frame skull-frame-7">
+      <text font-family="ConsolasFallback, Consolas, monospace" font-size="24" text-anchor="middle" fill="#c9d1d9" fill-opacity="0.79">
+        <tspan x="220" y="122">⠀⠀⣤⣀⠀⠀</tspan>
+        <tspan x="220" y="153">⠀⣷⣿⣾⣾⠀</tspan>
+        <tspan x="220" y="184">⡀⣿⣿⣿⢛⢠</tspan>
+        <tspan x="220" y="215">⣧⣿⣿⣿⣷⣾</tspan>
+        <tspan x="220" y="246">⣿⣿⣿⣿⣿⣿</tspan>
+        <tspan x="220" y="277">⡵⣿⣿⣿⠻⣿</tspan>
+        <tspan x="220" y="308">⡇⠉⣿⠛⠀⢸</tspan>
+        <tspan x="220" y="339">⡇⡀⠹⣠⣀⢸</tspan>
+        <tspan x="220" y="370">⠀⣿⣤⣿⠿⠈</tspan>
+        <tspan x="220" y="401">⠀⠇⢿⡿⠀⠀</tspan>
+        <tspan x="220" y="432">⠀⠀⠈⠀⠀⠀</tspan>
+      </text>
+    </g>
+<g class="skull-frame skull-frame-8">
+      <text font-family="ConsolasFallback, Consolas, monospace" font-size="24" text-anchor="middle" fill="#c9d1d9" fill-opacity="0.86">
+        <tspan x="220" y="122">⠀⠀⡀⣤⣤⣀⠀⠀⠀</tspan>
+        <tspan x="220" y="153">⠀⣄⣿⣿⣿⣾⣾⣤⠀</tspan>
+        <tspan x="220" y="184">⡀⣿⣿⣿⣿⣿⢛⣿⢠</tspan>
+        <tspan x="220" y="215">⣧⣿⣿⣿⣿⣿⣿⣷⣾</tspan>
+        <tspan x="220" y="246">⣿⣿⣿⣿⣿⣿⣿⣿⣿</tspan>
+        <tspan x="220" y="277">⡵⠻⣿⣿⣿⣿⢿⠻⣿</tspan>
+        <tspan x="220" y="308">⡇⠀⠉⠛⣿⠛⠀⡇⢸</tspan>
+        <tspan x="220" y="339">⡇⣠⡀⠹⡇⣠⠀⣿⢸</tspan>
+        <tspan x="220" y="370">⠀⠿⣿⣤⣿⣿⠿⠻⠈</tspan>
+        <tspan x="220" y="401">⠀⠀⢿⢿⣿⡿⠀⠀⠀</tspan>
+        <tspan x="220" y="432">⠀⠀⠀⠈⠈⠀⠀⠀⠀</tspan>
+      </text>
+    </g>
+<g class="skull-frame skull-frame-9">
+      <text font-family="ConsolasFallback, Consolas, monospace" font-size="24" text-anchor="middle" fill="#c9d1d9" fill-opacity="0.92">
+        <tspan x="220" y="122">⠀⠀⠀⡀⣤⣤⣤⣀⢀⠀⠀⠀</tspan>
+        <tspan x="220" y="153">⠀⣄⣷⣿⣿⣿⣿⣾⣿⣤⢀⠀</tspan>
+        <tspan x="220" y="184">⡀⣿⣿⣿⣿⣿⣿⣿⣼⣿⣾⢠</tspan>
+        <tspan x="220" y="215">⣧⣿⣿⣿⣿⣿⣿⣿⣿⣷⣯⣾</tspan>
+        <tspan x="220" y="246">⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿</tspan>
+        <tspan x="220" y="277">⡵⠻⡿⣿⣿⣿⣿⣿⣿⠻⡿⣿</tspan>
+        <tspan x="220" y="308">⡇⠀⠀⠛⠛⣿⠛⠛⠉⠀⡇⢸</tspan>
+        <tspan x="220" y="339">⡇⣠⠀⣄⣦⡇⣴⣠⠀⣀⣿⢸</tspan>
+        <tspan x="220" y="370">⠀⠿⠿⣿⣼⣦⣿⣿⠿⠿⠻⠈</tspan>
+        <tspan x="220" y="401">⠀⠀⠀⢿⡿⣿⣿⡿⠀⠀⠀⠀</tspan>
+        <tspan x="220" y="432">⠀⠀⠀⠀⠁⠁⠈⠀⠀⠀⠀⠀</tspan>
+      </text>
+    </g>
+<g class="skull-frame skull-frame-10">
+      <text font-family="ConsolasFallback, Consolas, monospace" font-size="24" text-anchor="middle" fill="#c9d1d9" fill-opacity="0.96">
+        <tspan x="220" y="122">⠀⠀⠀⡀⣄⣤⣤⣤⣀⢀⠀⠀⠀⠀</tspan>
+        <tspan x="220" y="153">⠀⠀⣄⣿⣿⣿⣿⣿⣾⣿⣾⣤⢀⠀</tspan>
+        <tspan x="220" y="184">⡀⣷⣿⣿⣿⣿⣿⣿⣿⣼⢛⣿⣾⢠</tspan>
+        <tspan x="220" y="215">⣧⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣯⣾</tspan>
+        <tspan x="220" y="246">⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿</tspan>
+        <tspan x="220" y="277">⡵⢿⡿⣿⣿⣿⣿⣿⣿⣿⢿⠻⡿⣿</tspan>
+        <tspan x="220" y="308">⡇⣿⠀⠉⠛⠛⣿⠛⠛⠉⠀⠀⡇⢸</tspan>
+        <tspan x="220" y="339">⡇⣿⠀⡀⣄⣦⠹⣴⣠⢀⠀⣀⣿⢸</tspan>
+        <tspan x="220" y="370">⠀⠟⠿⣿⣿⣼⣦⣿⣿⣟⠿⠿⠻⠈</tspan>
+        <tspan x="220" y="401">⠀⠀⠀⠇⢿⡿⣿⣿⡿⠸⠀⠀⠀⠀</tspan>
+        <tspan x="220" y="432">⠀⠀⠀⠀⠀⠁⠁⠈⠀⠀⠀⠀⠀⠀</tspan>
+      </text>
+    </g>
+<g class="skull-frame skull-frame-11">
+      <text font-family="ConsolasFallback, Consolas, monospace" font-size="24" text-anchor="middle" fill="#c9d1d9" fill-opacity="0.99">
+        <tspan x="220" y="122">⠀⠀⠀⠀⡀⣄⣤⣤⣤⣤⣀⢀⠀⠀⠀⠀</tspan>
+        <tspan x="220" y="153">⠀⠀⣄⣷⣿⣿⣿⣿⣿⣿⣾⣿⣾⣤⢀⠀</tspan>
+        <tspan x="220" y="184">⡀⣷⣿⣿⣿⣿⣿⣿⣿⣿⣿⣼⢛⣿⣾⢠</tspan>
+        <tspan x="220" y="215">⣧⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣯⣾</tspan>
+        <tspan x="220" y="246">⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿</tspan>
+        <tspan x="220" y="277">⡵⢿⠻⡿⣿⣿⣿⣿⣿⣿⣿⣿⢿⠻⡿⣿</tspan>
+        <tspan x="220" y="308">⡇⣿⠀⠀⠉⠛⠛⣿⣿⠛⠛⠉⠀⠀⡇⢸</tspan>
+        <tspan x="220" y="339">⡇⣿⣠⠀⡀⣄⣦⠹⡇⣴⣠⢀⠀⣀⣿⢸</tspan>
+        <tspan x="220" y="370">⠀⠟⠿⠿⣿⣿⣼⣤⣦⣿⣿⣟⠿⠿⠻⠈</tspan>
+        <tspan x="220" y="401">⠀⠀⠀⠀⠇⢿⡿⢿⣿⣿⡿⠸⠀⠀⠀⠀</tspan>
+        <tspan x="220" y="432">⠀⠀⠀⠀⠀⠀⠁⠈⠁⠈⠀⠀⠀⠀⠀⠀</tspan>
+      </text>
+    </g>
+<g class="skull-frame skull-frame-12">
+      <text font-family="ConsolasFallback, Consolas, monospace" font-size="24" text-anchor="middle" fill="#c9d1d9" fill-opacity="1.00">
+        <tspan x="220" y="122">⠀⠀⠀⠀⡀⣄⣤⣤⣤⣤⣀⢀⠀⠀⠀⠀</tspan>
+        <tspan x="220" y="153">⠀⠀⣄⣷⣿⣿⣿⣿⣿⣿⣾⣿⣾⣤⢀⠀</tspan>
+        <tspan x="220" y="184">⡀⣷⣿⣿⣿⣿⣿⣿⣿⣿⣿⣼⢛⣿⣾⢠</tspan>
+        <tspan x="220" y="215">⣧⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣯⣾</tspan>
+        <tspan x="220" y="246">⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿</tspan>
+        <tspan x="220" y="277">⡵⢿⠻⡿⣿⣿⣿⣿⣿⣿⣿⣿⢿⠻⡿⣿</tspan>
+        <tspan x="220" y="308">⡇⣿⠀⠀⠉⠛⠛⣿⣿⠛⠛⠉⠀⠀⡇⢸</tspan>
+        <tspan x="220" y="339">⡇⣿⣠⠀⡀⣄⣦⠹⡇⣴⣠⢀⠀⣀⣿⢸</tspan>
+        <tspan x="220" y="370">⠀⠟⠿⠿⣿⣿⣼⣤⣦⣿⣿⣟⠿⠿⠻⠈</tspan>
+        <tspan x="220" y="401">⠀⠀⠀⠀⠇⢿⡿⢿⣿⣿⡿⠸⠀⠀⠀⠀</tspan>
+        <tspan x="220" y="432">⠀⠀⠀⠀⠀⠀⠁⠈⠁⠈⠀⠀⠀⠀⠀⠀</tspan>
+      </text>
+    </g>
+<g class="skull-frame skull-frame-13">
+      <text font-family="ConsolasFallback, Consolas, monospace" font-size="24" text-anchor="middle" fill="#c9d1d9" fill-opacity="0.99">
+        <tspan x="220" y="122">⠀⠀⠀⠀⡀⣄⣤⣤⣤⣤⣀⢀⠀⠀⠀⠀</tspan>
+        <tspan x="220" y="153">⠀⠀⣄⣷⣿⣿⣿⣿⣿⣿⣾⣿⣾⣤⢀⠀</tspan>
+        <tspan x="220" y="184">⡀⣷⣿⣿⣿⣿⣿⣿⣿⣿⣿⣼⢛⣿⣾⢠</tspan>
+        <tspan x="220" y="215">⣧⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣯⣾</tspan>
+        <tspan x="220" y="246">⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿</tspan>
+        <tspan x="220" y="277">⡵⢿⠻⡿⣿⣿⣿⣿⣿⣿⣿⣿⢿⠻⡿⣿</tspan>
+        <tspan x="220" y="308">⡇⣿⠀⠀⠉⠛⠛⣿⣿⠛⠛⠉⠀⠀⡇⢸</tspan>
+        <tspan x="220" y="339">⡇⣿⣠⠀⡀⣄⣦⠹⡇⣴⣠⢀⠀⣀⣿⢸</tspan>
+        <tspan x="220" y="370">⠀⠟⠿⠿⣿⣿⣼⣤⣦⣿⣿⣟⠿⠿⠻⠈</tspan>
+        <tspan x="220" y="401">⠀⠀⠀⠀⠇⢿⡿⢿⣿⣿⡿⠸⠀⠀⠀⠀</tspan>
+        <tspan x="220" y="432">⠀⠀⠀⠀⠀⠀⠁⠈⠁⠈⠀⠀⠀⠀⠀⠀</tspan>
+      </text>
+    </g>
+<g class="skull-frame skull-frame-14">
+      <text font-family="ConsolasFallback, Consolas, monospace" font-size="24" text-anchor="middle" fill="#c9d1d9" fill-opacity="0.96">
+        <tspan x="220" y="122">⠀⠀⠀⠀⡀⣄⣤⣤⣤⣀⢀⠀⠀⠀</tspan>
+        <tspan x="220" y="153">⠀⠀⣄⣷⣿⣿⣿⣿⣿⣾⣿⣤⢀⠀</tspan>
+        <tspan x="220" y="184">⡀⣷⣿⣿⣿⣿⣿⣿⣿⣿⣼⢛⣾⢠</tspan>
+        <tspan x="220" y="215">⣧⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣯⣾</tspan>
+        <tspan x="220" y="246">⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿</tspan>
+        <tspan x="220" y="277">⡵⢿⠻⡿⣿⣿⣿⣿⣿⣿⣿⢿⡿⣿</tspan>
+        <tspan x="220" y="308">⡇⣿⠀⠀⠉⠛⠛⣿⠛⠛⠉⠀⡇⢸</tspan>
+        <tspan x="220" y="339">⡇⣿⣠⠀⡀⣄⣦⡇⣴⣠⢀⠀⣿⢸</tspan>
+        <tspan x="220" y="370">⠀⠟⠿⠿⣿⣿⣼⣤⣿⣿⣟⠿⠻⠈</tspan>
+        <tspan x="220" y="401">⠀⠀⠀⠀⠇⢿⡿⢿⣿⡿⠸⠀⠀⠀</tspan>
+        <tspan x="220" y="432">⠀⠀⠀⠀⠀⠀⠁⠈⠈⠀⠀⠀⠀⠀</tspan>
+      </text>
+    </g>
+<g class="skull-frame skull-frame-15">
+      <text font-family="ConsolasFallback, Consolas, monospace" font-size="24" text-anchor="middle" fill="#c9d1d9" fill-opacity="0.92">
+        <tspan x="220" y="122">⠀⠀⠀⡀⣄⣤⣤⣤⢀⠀⠀⠀</tspan>
+        <tspan x="220" y="153">⠀⠀⣄⣿⣿⣿⣿⣿⣿⣾⣤⠀</tspan>
+        <tspan x="220" y="184">⡀⣷⣿⣿⣿⣿⣿⣿⣿⢛⣿⢠</tspan>
+        <tspan x="220" y="215">⣧⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣾</tspan>
+        <tspan x="220" y="246">⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿</tspan>
+        <tspan x="220" y="277">⡵⢿⠻⣿⣿⣿⣿⣿⣿⢿⠻⣿</tspan>
+        <tspan x="220" y="308">⡇⣿⠀⠉⠛⠛⣿⠛⠛⠀⠀⢸</tspan>
+        <tspan x="220" y="339">⡇⣿⣠⠀⣄⣦⠹⣴⣠⠀⣀⢸</tspan>
+        <tspan x="220" y="370">⠀⠟⠿⠿⣿⣼⣤⣿⣿⠿⠿⠈</tspan>
+        <tspan x="220" y="401">⠀⠀⠀⠀⢿⡿⢿⣿⡿⠀⠀⠀</tspan>
+        <tspan x="220" y="432">⠀⠀⠀⠀⠀⠁⠈⠈⠀⠀⠀⠀</tspan>
+      </text>
+    </g>
+<g class="skull-frame skull-frame-16">
+      <text font-family="ConsolasFallback, Consolas, monospace" font-size="24" text-anchor="middle" fill="#c9d1d9" fill-opacity="0.86">
+        <tspan x="220" y="122">⠀⠀⠀⣄⣤⣤⢀⠀⠀</tspan>
+        <tspan x="220" y="153">⠀⣄⣷⣿⣿⣿⣿⣤⠀</tspan>
+        <tspan x="220" y="184">⡀⣿⣿⣿⣿⣿⣼⣿⢠</tspan>
+        <tspan x="220" y="215">⣧⣿⣿⣿⣿⣿⣿⣷⣾</tspan>
+        <tspan x="220" y="246">⣿⣿⣿⣿⣿⣿⣿⣿⣿</tspan>
+        <tspan x="220" y="277">⡵⠻⡿⣿⣿⣿⣿⠻⣿</tspan>
+        <tspan x="220" y="308">⡇⣿⠀⠛⣿⠛⠉⠀⢸</tspan>
+        <tspan x="220" y="339">⡇⣿⠀⣄⠹⡇⢀⣀⢸</tspan>
+        <tspan x="220" y="370">⠀⠟⠿⣿⣼⣦⣿⠿⠈</tspan>
+        <tspan x="220" y="401">⠀⠀⠀⢿⡿⣿⡿⠀⠀</tspan>
+        <tspan x="220" y="432">⠀⠀⠀⠀⠁⠁⠀⠀⠀</tspan>
+      </text>
+    </g>
+<g class="skull-frame skull-frame-17">
+      <text font-family="ConsolasFallback, Consolas, monospace" font-size="24" text-anchor="middle" fill="#c9d1d9" fill-opacity="0.79">
+        <tspan x="220" y="122">⠀⠀⣄⣤⠀⠀</tspan>
+        <tspan x="220" y="153">⠀⣷⣿⣿⣾⠀</tspan>
+        <tspan x="220" y="184">⡀⣿⣿⣿⢛⢠</tspan>
+        <tspan x="220" y="215">⣧⣿⣿⣿⣿⣾</tspan>
+        <tspan x="220" y="246">⣿⣿⣿⣿⣿⣿</tspan>
+        <tspan x="220" y="277">⡵⠻⣿⣿⣿⣿</tspan>
+        <tspan x="220" y="308">⡇⠀⠛⣿⠉⢸</tspan>
+        <tspan x="220" y="339">⡇⣠⣄⡇⢀⢸</tspan>
+        <tspan x="220" y="370">⠀⠿⣿⣦⣟⠈</tspan>
+        <tspan x="220" y="401">⠀⠀⢿⣿⠸⠀</tspan>
+        <tspan x="220" y="432">⠀⠀⠀⠁⠀⠀</tspan>
+      </text>
+    </g>
+<g class="skull-frame skull-frame-18">
+      <text font-family="ConsolasFallback, Consolas, monospace" font-size="24" text-anchor="middle" fill="#c9d1d9" fill-opacity="0.72">
+        <tspan x="220" y="122">⠀⣤⠀</tspan>
+        <tspan x="220" y="153">⠀⣿⠀</tspan>
+        <tspan x="220" y="184">⡀⣿⢠</tspan>
+        <tspan x="220" y="215">⣧⣿⣾</tspan>
+        <tspan x="220" y="246">⣿⣿⣿</tspan>
+        <tspan x="220" y="277">⡵⣿⣿</tspan>
+        <tspan x="220" y="308">⡇⠛⢸</tspan>
+        <tspan x="220" y="339">⡇⣦⢸</tspan>
+        <tspan x="220" y="370">⠀⣼⠈</tspan>
+        <tspan x="220" y="401">⠀⡿⠀</tspan>
+        <tspan x="220" y="432">⠀⠁⠀</tspan>
+      </text>
+    </g>
+<g class="skull-frame skull-frame-19">
+      <text font-family="ConsolasFallback, Consolas, monospace" font-size="24" text-anchor="middle" fill="#c9d1d9" fill-opacity="0.79">
+        <tspan x="220" y="122">⠀⠀⣀⣤⠀⠀</tspan>
+        <tspan x="220" y="153">⠀⣾⣾⣿⣷⠀</tspan>
+        <tspan x="220" y="184">⢠⢛⣿⣿⣿⡀</tspan>
+        <tspan x="220" y="215">⣾⣷⣿⣿⣿⣧</tspan>
+        <tspan x="220" y="246">⣿⣿⣿⣿⣿⣿</tspan>
+        <tspan x="220" y="277">⣿⠻⣿⣿⣿⡵</tspan>
+        <tspan x="220" y="308">⢸⠀⠛⣿⠉⡇</tspan>
+        <tspan x="220" y="339">⢸⣀⣠⠹⡀⡇</tspan>
+        <tspan x="220" y="370">⠈⠿⣿⣤⣿⠀</tspan>
+        <tspan x="220" y="401">⠀⠀⡿⢿⠇⠀</tspan>
+        <tspan x="220" y="432">⠀⠀⠀⠈⠀⠀</tspan>
+      </text>
+    </g>
+<g class="skull-frame skull-frame-20">
+      <text font-family="ConsolasFallback, Consolas, monospace" font-size="24" text-anchor="middle" fill="#c9d1d9" fill-opacity="0.86">
+        <tspan x="220" y="122">⠀⠀⠀⣀⣤⣤⡀⠀⠀</tspan>
+        <tspan x="220" y="153">⠀⣤⣾⣾⣿⣿⣿⣄⠀</tspan>
+        <tspan x="220" y="184">⢠⣿⢛⣿⣿⣿⣿⣿⡀</tspan>
+        <tspan x="220" y="215">⣾⣷⣿⣿⣿⣿⣿⣿⣧</tspan>
+        <tspan x="220" y="246">⣿⣿⣿⣿⣿⣿⣿⣿⣿</tspan>
+        <tspan x="220" y="277">⣿⠻⢿⣿⣿⣿⣿⠻⡵</tspan>
+        <tspan x="220" y="308">⢸⡇⠀⠛⣿⠛⠉⠀⡇</tspan>
+        <tspan x="220" y="339">⢸⣿⠀⣠⡇⠹⡀⣠⡇</tspan>
+        <tspan x="220" y="370">⠈⠻⠿⣿⣿⣤⣿⠿⠀</tspan>
+        <tspan x="220" y="401">⠀⠀⠀⡿⣿⢿⢿⠀⠀</tspan>
+        <tspan x="220" y="432">⠀⠀⠀⠀⠈⠈⠀⠀⠀</tspan>
+      </text>
+    </g>
+<g class="skull-frame skull-frame-21">
+      <text font-family="ConsolasFallback, Consolas, monospace" font-size="24" text-anchor="middle" fill="#c9d1d9" fill-opacity="0.92">
+        <tspan x="220" y="122">⠀⠀⠀⢀⣀⣤⣤⣤⡀⠀⠀⠀</tspan>
+        <tspan x="220" y="153">⠀⢀⣤⣿⣾⣿⣿⣿⣿⣷⣄⠀</tspan>
+        <tspan x="220" y="184">⢠⣾⣿⣼⣿⣿⣿⣿⣿⣿⣿⡀</tspan>
+        <tspan x="220" y="215">⣾⣯⣷⣿⣿⣿⣿⣿⣿⣿⣿⣧</tspan>
+        <tspan x="220" y="246">⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿</tspan>
+        <tspan x="220" y="277">⣿⡿⠻⣿⣿⣿⣿⣿⣿⡿⠻⡵</tspan>
+        <tspan x="220" y="308">⢸⡇⠀⠉⠛⠛⣿⠛⠛⠀⠀⡇</tspan>
+        <tspan x="220" y="339">⢸⣿⣀⠀⣠⣴⡇⣦⣄⠀⣠⡇</tspan>
+        <tspan x="220" y="370">⠈⠻⠿⠿⣿⣿⣦⣼⣿⠿⠿⠀</tspan>
+        <tspan x="220" y="401">⠀⠀⠀⠀⡿⣿⣿⡿⢿⠀⠀⠀</tspan>
+        <tspan x="220" y="432">⠀⠀⠀⠀⠀⠈⠁⠁⠀⠀⠀⠀</tspan>
+      </text>
+    </g>
+<g class="skull-frame skull-frame-22">
+      <text font-family="ConsolasFallback, Consolas, monospace" font-size="24" text-anchor="middle" fill="#c9d1d9" fill-opacity="0.96">
+        <tspan x="220" y="122">⠀⠀⠀⠀⢀⣀⣤⣤⣤⣄⡀⠀⠀⠀</tspan>
+        <tspan x="220" y="153">⠀⢀⣤⣾⣿⣾⣿⣿⣿⣿⣿⣄⠀⠀</tspan>
+        <tspan x="220" y="184">⢠⣾⣿⢛⣼⣿⣿⣿⣿⣿⣿⣿⣷⡀</tspan>
+        <tspan x="220" y="215">⣾⣯⣷⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧</tspan>
+        <tspan x="220" y="246">⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿</tspan>
+        <tspan x="220" y="277">⣿⡿⠻⢿⣿⣿⣿⣿⣿⣿⣿⡿⢿⡵</tspan>
+        <tspan x="220" y="308">⢸⡇⠀⠀⠉⠛⠛⣿⠛⠛⠉⠀⣿⡇</tspan>
+        <tspan x="220" y="339">⢸⣿⣀⠀⢀⣠⣴⠹⣦⣄⡀⠀⣿⡇</tspan>
+        <tspan x="220" y="370">⠈⠻⠿⠿⣟⣿⣿⣦⣼⣿⣿⠿⠟⠀</tspan>
+        <tspan x="220" y="401">⠀⠀⠀⠀⠸⡿⣿⣿⡿⢿⠇⠀⠀⠀</tspan>
+        <tspan x="220" y="432">⠀⠀⠀⠀⠀⠀⠈⠁⠁⠀⠀⠀⠀⠀</tspan>
+      </text>
+    </g>
+<g class="skull-frame skull-frame-23">
+      <text font-family="ConsolasFallback, Consolas, monospace" font-size="24" text-anchor="middle" fill="#c9d1d9" fill-opacity="0.99">
+        <tspan x="220" y="122">⠀⠀⠀⠀⢀⣀⣤⣤⣤⣤⣄⡀⠀⠀⠀⠀</tspan>
+        <tspan x="220" y="153">⠀⢀⣤⣾⣿⣾⣿⣿⣿⣿⣿⣿⣷⣄⠀⠀</tspan>
+        <tspan x="220" y="184">⢠⣾⣿⢛⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⡀</tspan>
+        <tspan x="220" y="215">⣾⣯⣷⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧</tspan>
+        <tspan x="220" y="246">⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿</tspan>
+        <tspan x="220" y="277">⣿⡿⠻⢿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠻⢿⡵</tspan>
+        <tspan x="220" y="308">⢸⡇⠀⠀⠉⠛⠛⣿⣿⠛⠛⠉⠀⠀⣿⡇</tspan>
+        <tspan x="220" y="339">⢸⣿⣀⠀⢀⣠⣴⡇⠹⣦⣄⡀⠀⣠⣿⡇</tspan>
+        <tspan x="220" y="370">⠈⠻⠿⠿⣟⣿⣿⣦⣤⣼⣿⣿⠿⠿⠟⠀</tspan>
+        <tspan x="220" y="401">⠀⠀⠀⠀⠸⡿⣿⣿⢿⡿⢿⠇⠀⠀⠀⠀</tspan>
+        <tspan x="220" y="432">⠀⠀⠀⠀⠀⠀⠈⠁⠈⠁⠀⠀⠀⠀⠀⠀</tspan>
+      </text>
+    </g>
+  </g>
   <text font-family="ConsolasFallback, Consolas, monospace" font-size="16" fill="#c9d1d9">
-    <tspan x="340" y="28">crisanto@israel </tspan><tspan class="cc">--------------------------------------------------</tspan><tspan x="340" y="47" class="cc">. </tspan><tspan class="key">OS</tspan><tspan>:</tspan><tspan class="cc"> ............................................ </tspan><tspan class="value">macOS, iOS, Linux</tspan><tspan x="340" y="66" class="cc">. </tspan><tspan class="key">Role</tspan><tspan>:</tspan><tspan class="cc"> ......................................... </tspan><tspan class="value">Software Developer</tspan><tspan x="340" y="85" class="cc">. </tspan><tspan class="key">Company</tspan><tspan>:</tspan><tspan class="cc"> ....................................... </tspan><tspan class="value">Rebelde Incógnito</tspan><tspan x="340" y="104" class="cc">. </tspan><tspan class="key">Location</tspan><tspan>:</tspan><tspan class="cc"> ............................................... </tspan><tspan class="value">Portugal</tspan><tspan x="340" y="123" class="cc">. </tspan><tspan class="key">Website</tspan><tspan>:</tspan><tspan class="cc"> ...................................... </tspan><tspan class="value">israelcrisanto.com</tspan><tspan x="340" y="142" class="cc">. </tspan><tspan class="key">Motto</tspan><tspan>:</tspan><tspan class="cc"> .................................. </tspan><tspan class="value">Code great, live better.</tspan><tspan x="340" y="180" class="cc">. </tspan><tspan class="key">Languages.Programming</tspan><tspan>:</tspan><tspan class="cc"> ...... </tspan><tspan class="value">TypeScript, JavaScript, Java, Python</tspan><tspan x="340" y="199" class="cc">. </tspan><tspan class="key">Languages.Systems</tspan><tspan>:</tspan><tspan class="cc"> ....................... </tspan><tspan class="value">Python, Lua, Shell, C++</tspan><tspan x="340" y="218" class="cc">. </tspan><tspan class="key">Focus</tspan><tspan>:</tspan><tspan class="cc"> ............................. </tspan><tspan class="value">AI, mobile, developer tooling</tspan><tspan x="340" y="237" class="cc">. </tspan><tspan class="key">Hobbies</tspan><tspan>:</tspan><tspan class="cc"> ...................... </tspan><tspan class="value">building things, 3d printing, dogs</tspan><tspan x="340" y="275">- Contact </tspan><tspan class="cc">---------------------------------------------------------</tspan><tspan x="340" y="294" class="cc">. </tspan><tspan class="key">LinkedIn</tspan><tspan>:</tspan><tspan class="cc"> ............................... </tspan><tspan class="value">linkedin.com/in/crisanto</tspan><tspan x="340" y="313" class="cc">. </tspan><tspan class="key">X</tspan><tspan>:</tspan><tspan class="cc"> ............................................... </tspan><tspan class="value">x.com/icrisanto</tspan><tspan x="340" y="332" class="cc">. </tspan><tspan class="key">GitHub</tspan><tspan>:</tspan><tspan class="cc"> ....................................... </tspan><tspan class="value">github.com/falleco</tspan><tspan x="340" y="370">- GitHub Stats </tspan><tspan class="cc">----------------------------------------------------</tspan><tspan x="340" y="389" class="cc">. </tspan><tspan class="key">Account age</tspan><tspan>:</tspan><tspan class="cc"> ......................... </tspan><tspan class="value">14 years, 5 months, 10 days</tspan><tspan x="340" y="408" class="cc">. </tspan><tspan class="key">Repos</tspan><tspan>:</tspan><tspan class="cc"> ........................................................ </tspan><tspan class="value">26</tspan><tspan x="340" y="427" class="cc">. </tspan><tspan class="key">Contributed</tspan><tspan>:</tspan><tspan class="cc"> .................................................. </tspan><tspan class="value">31</tspan><tspan x="340" y="446" class="cc">. </tspan><tspan class="key">Stars</tspan><tspan>:</tspan><tspan class="cc"> ........................................................ </tspan><tspan class="value">83</tspan><tspan x="340" y="465" class="cc">. </tspan><tspan class="key">Commits</tspan><tspan>:</tspan><tspan class="cc"> ..................................................... </tspan><tspan class="value">106</tspan><tspan x="340" y="484" class="cc">. </tspan><tspan class="key">Followers</tspan><tspan>:</tspan><tspan class="cc"> .................................................... </tspan><tspan class="value">14</tspan><tspan x="340" y="503" class="cc">. </tspan><tspan class="key">Lines of code</tspan><tspan>:</tspan><tspan class="cc"> ....................... </tspan><tspan class="value">126,168</tspan> (<tspan class="addColor">+186,410</tspan>, <tspan class="delColor">-60,242</tspan>)
+    <tspan x="440" y="28">crisanto@israel </tspan><tspan class="cc">--------------------------------------------------</tspan><tspan x="440" y="47" class="cc">. </tspan><tspan class="key">OS</tspan><tspan>:</tspan><tspan class="cc"> ............................................ </tspan><tspan class="value">macOS, iOS, Linux</tspan><tspan x="440" y="66" class="cc">. </tspan><tspan class="key">Role</tspan><tspan>:</tspan><tspan class="cc"> ......................................... </tspan><tspan class="value">Software Developer</tspan><tspan x="440" y="85" class="cc">. </tspan><tspan class="key">Company</tspan><tspan>:</tspan><tspan class="cc"> ....................................... </tspan><tspan class="value">Rebelde Incógnito</tspan><tspan x="440" y="104" class="cc">. </tspan><tspan class="key">Location</tspan><tspan>:</tspan><tspan class="cc"> ............................................... </tspan><tspan class="value">Portugal</tspan><tspan x="440" y="123" class="cc">. </tspan><tspan class="key">Website</tspan><tspan>:</tspan><tspan class="cc"> ...................................... </tspan><tspan class="value">israelcrisanto.com</tspan><tspan x="440" y="142" class="cc">. </tspan><tspan class="key">Motto</tspan><tspan>:</tspan><tspan class="cc"> .................................. </tspan><tspan class="value">Code great, live better.</tspan><tspan x="440" y="180" class="cc">. </tspan><tspan class="key">Languages.Programming</tspan><tspan>:</tspan><tspan class="cc"> ...... </tspan><tspan class="value">TypeScript, JavaScript, Java, Python</tspan><tspan x="440" y="199" class="cc">. </tspan><tspan class="key">Languages.Systems</tspan><tspan>:</tspan><tspan class="cc"> ....................... </tspan><tspan class="value">Python, Lua, Shell, C++</tspan><tspan x="440" y="218" class="cc">. </tspan><tspan class="key">Focus</tspan><tspan>:</tspan><tspan class="cc"> ............................. </tspan><tspan class="value">AI, mobile, developer tooling</tspan><tspan x="440" y="237" class="cc">. </tspan><tspan class="key">Hobbies</tspan><tspan>:</tspan><tspan class="cc"> ...................... </tspan><tspan class="value">building things, 3d printing, dogs</tspan><tspan x="440" y="275">- Contact </tspan><tspan class="cc">---------------------------------------------------------</tspan><tspan x="440" y="294" class="cc">. </tspan><tspan class="key">LinkedIn</tspan><tspan>:</tspan><tspan class="cc"> ............................... </tspan><tspan class="value">linkedin.com/in/crisanto</tspan><tspan x="440" y="313" class="cc">. </tspan><tspan class="key">X</tspan><tspan>:</tspan><tspan class="cc"> ............................................... </tspan><tspan class="value">x.com/icrisanto</tspan><tspan x="440" y="332" class="cc">. </tspan><tspan class="key">GitHub</tspan><tspan>:</tspan><tspan class="cc"> ....................................... </tspan><tspan class="value">github.com/falleco</tspan><tspan x="440" y="370">- GitHub Stats </tspan><tspan class="cc">----------------------------------------------------</tspan><tspan x="440" y="389" class="cc">. </tspan><tspan class="key">Account age</tspan><tspan>:</tspan><tspan class="cc"> ......................... </tspan><tspan class="value">14 years, 5 months, 10 days</tspan><tspan x="440" y="408" class="cc">. </tspan><tspan class="key">Repos</tspan><tspan>:</tspan><tspan class="cc"> ........................................................ </tspan><tspan class="value">26</tspan><tspan x="440" y="427" class="cc">. </tspan><tspan class="key">Contributed</tspan><tspan>:</tspan><tspan class="cc"> .................................................. </tspan><tspan class="value">31</tspan><tspan x="440" y="446" class="cc">. </tspan><tspan class="key">Stars</tspan><tspan>:</tspan><tspan class="cc"> ........................................................ </tspan><tspan class="value">83</tspan><tspan x="440" y="465" class="cc">. </tspan><tspan class="key">Commits</tspan><tspan>:</tspan><tspan class="cc"> ..................................................... </tspan><tspan class="value">106</tspan><tspan x="440" y="484" class="cc">. </tspan><tspan class="key">Followers</tspan><tspan>:</tspan><tspan class="cc"> .................................................... </tspan><tspan class="value">14</tspan><tspan x="440" y="503" class="cc">. </tspan><tspan class="key">Lines of code</tspan><tspan>:</tspan><tspan class="cc"> ....................... </tspan><tspan class="value">126,168</tspan> (<tspan class="addColor">+186,410</tspan>, <tspan class="delColor">-60,242</tspan>)
   </text>
 </svg>

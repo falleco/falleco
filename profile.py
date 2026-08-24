@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import calendar
 import json
+import math
 import os
 import sys
 from datetime import datetime, timezone
@@ -19,11 +20,15 @@ USERNAME = os.getenv("PROFILE_USERNAME", "falleco")
 TOKEN = os.getenv("PROFILE_TOKEN") or os.getenv("GITHUB_TOKEN")
 ROOT = Path(__file__).resolve().parent
 CACHE_FILE = ROOT / "cache" / "stats.json"
-CARD_WIDTH = 1000
+CARD_WIDTH = 1130
 CARD_HEIGHT = 540
-ART_X = 41
-DETAIL_X = 340
+DETAIL_X = 440
 DETAIL_CHARS = 68
+ART_CENTER_X = DETAIL_X // 2
+ART_FRAME_COUNT = 24
+ART_ANIMATION_SECONDS = 12
+ART_MIN_WIDTH_RATIO = 0.18
+BRAILLE_BLANK = "⠀"
 
 ASCII_ART = [
     "⠀⠀⠀⠀⢀⣀⣤⣤⣤⣤⣄⡀⠀⠀⠀⠀",
@@ -276,6 +281,36 @@ def svg_info_line(label: str, value: Any, x: int, y: int) -> str:
     )
 
 
+def generate_ascii_frames() -> list[list[str]]:
+    """Create a full Y-axis turn by progressively compressing the ASCII art."""
+    source_width = max(len(line) for line in ASCII_ART)
+    source = [line.ljust(source_width, BRAILLE_BLANK) for line in ASCII_ART]
+    frames: list[list[str]] = []
+
+    for frame_index in range(ART_FRAME_COUNT):
+        angle = 2 * math.pi * frame_index / ART_FRAME_COUNT
+        facing = math.cos(angle)
+        width_ratio = ART_MIN_WIDTH_RATIO + (1 - ART_MIN_WIDTH_RATIO) * abs(facing)
+        frame_width = max(3, round(source_width * width_ratio))
+        frame_source = source if facing >= 0 else [line[::-1] for line in source]
+        frame: list[str] = []
+        for row_index, line in enumerate(frame_source):
+            depth = 0.45 + 0.55 * row_index / (len(frame_source) - 1)
+            columns: list[int] = []
+            for column in range(frame_width):
+                position = column / (frame_width - 1)
+                curved_depth = 1 - (2 * position - 1) ** 2
+                perspective = math.sin(angle) * curved_depth * depth * 1.35
+                source_column = round(
+                    position * (source_width - 1) + perspective
+                )
+                columns.append(max(0, min(source_width - 1, source_column)))
+            frame.append("".join(line[column] for column in columns))
+        frames.append(frame)
+
+    return frames
+
+
 def render_svg(stats: dict[str, Any], theme: dict[str, str]) -> str:
     additions = stats["additions"]
     deletions = stats["deletions"]
@@ -357,11 +392,34 @@ def render_svg(stats: dict[str, Any], theme: dict[str, str]) -> str:
         f'<tspan class="cc">{loc_dots}</tspan>{loc_value}'
     )
 
+    ascii_frames = generate_ascii_frames()
     art_step = 31
     art_start = (CARD_HEIGHT - art_step * len(ASCII_ART)) // 2 + 23
-    art_rows = "\n".join(
-        f'<tspan x="{ART_X}" y="{art_start + index * art_step}">{escape(line)}</tspan>'
-        for index, line in enumerate(ASCII_ART)
+    frame_duration = ART_ANIMATION_SECONDS / ART_FRAME_COUNT
+    visible_percent = 100 / ART_FRAME_COUNT
+    frame_delays = "\n    ".join(
+        f'.skull-frame-{index} {{ '
+        f'{"opacity: 1; " if index == 0 else ""}'
+        f'animation-delay: {index * frame_duration:g}s; }}'
+        for index in range(ART_FRAME_COUNT)
+    )
+    art_frames = "\n".join(
+        '<g class="skull-frame skull-frame-{frame_index}">\n'
+        '      <text font-family="ConsolasFallback, Consolas, monospace" '
+        'font-size="24" text-anchor="middle" fill="{color}" fill-opacity="{opacity:.2f}">\n'
+        '{rows}\n'
+        '      </text>\n'
+        '    </g>'.format(
+            frame_index=frame_index,
+            color=theme["text"],
+            opacity=0.72 + 0.28 * abs(math.cos(2 * math.pi * frame_index / ART_FRAME_COUNT)),
+            rows="\n".join(
+                f'        <tspan x="{ART_CENTER_X}" y="{art_start + row_index * art_step}">'
+                f'{escape(line)}</tspan>'
+                for row_index, line in enumerate(frame)
+            ),
+        )
+        for frame_index, frame in enumerate(ascii_frames)
     )
 
     return f'''<?xml version="1.0" encoding="UTF-8"?>
@@ -380,12 +438,25 @@ def render_svg(stats: dict[str, Any], theme: dict[str, str]) -> str:
     .addColor {{ fill: {theme['add']}; }}
     .delColor {{ fill: {theme['delete']}; }}
     .cc {{ fill: {theme['connector']}; }}
+    .skull-frame {{
+      opacity: 0;
+      animation: skull-frame-cycle {ART_ANIMATION_SECONDS}s linear infinite;
+    }}
+    {frame_delays}
+    @keyframes skull-frame-cycle {{
+      0%, {visible_percent - 0.01:.3f}% {{ opacity: 1; }}
+      {visible_percent:.3f}%, 100% {{ opacity: 0; }}
+    }}
+    @media (prefers-reduced-motion: reduce) {{
+      .skull-frame {{ animation: none; opacity: 0; }}
+      .skull-frame-0 {{ opacity: 1; }}
+    }}
     text, tspan {{ white-space: pre; }}
   </style>
   <rect width="{CARD_WIDTH}" height="{CARD_HEIGHT}" rx="15" fill="{theme['background']}"/>
-  <text font-family="ConsolasFallback, Consolas, monospace" font-size="24" fill="{theme['text']}">
-{art_rows}
-  </text>
+  <g aria-label="Rotating ASCII skull">
+    {art_frames}
+  </g>
   <text font-family="ConsolasFallback, Consolas, monospace" font-size="16" fill="{theme['text']}">
     {''.join(rows)}
   </text>
