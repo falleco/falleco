@@ -18,11 +18,41 @@
       "deletions": 0,
       "head": "262d3016bc355567c8dafe4372c6b438ae59a400"
     },
+    "falleco/ai-flow": {
+      "additions": 0,
+      "commits": 0,
+      "deletions": 0,
+      "head": "e4541ae3a2cc56df536eff645573ab2438d5cbfd"
+    },
+    "falleco/ai-ready-template": {
+      "additions": 0,
+      "commits": 0,
+      "deletions": 0,
+      "head": "5ade8720f965b2130756ad89ff1150cce8131926"
+    },
+    "falleco/amplify-vite-react-template": {
+      "additions": 0,
+      "commits": 0,
+      "deletions": 0,
+      "head": "34da5a8c1c5af456caa3fdaf5a97f1e69f67a58a"
+    },
     "falleco/clawpit": {
       "additions": 0,
       "commits": 0,
       "deletions": 0,
       "head": "e384a3c1d87caaf778c8802ad7fe771d8c7ff182"
+    },
+    "falleco/codero": {
+      "additions": 17999,
+      "commits": 5,
+      "deletions": 1197,
+      "head": "6968ffaea1f74a46aeec5db32633b0aafcb6ee40"
+    },
+    "falleco/context-scraper-ai": {
+      "additions": 0,
+      "commits": 0,
+      "deletions": 0,
+      "head": "be806106283c0b08e5cf7322d29395aec1967805"
     },
     "falleco/defi-demo": {
       "additions": 0,
@@ -43,10 +73,10 @@
       "head": "257b6d5bf8e1ed89068b0ef22508fb6d6ec7d635"
     },
     "falleco/falleco": {
-      "additions": 480,
-      "commits": 3,
-      "deletions": 52,
-      "head": "e776544e631e56aba2f0581e43a627ebf49541a8"
+      "additions": 1865,
+      "commits": 10,
+      "deletions": 1148,
+      "head": "3c60c226b711899c9bb40abdc550bd33bd7883e3"
     },
     "falleco/fusion360-mcp": {
       "additions": 0,
@@ -54,11 +84,29 @@
       "deletions": 0,
       "head": "3545107ea79d69a9f43f62eee870deea096d9652"
     },
+    "falleco/homelab": {
+      "additions": 28889,
+      "commits": 1,
+      "deletions": 0,
+      "head": "d0941fe441754ba86b7f7619ba8b51f52026d314"
+    },
+    "falleco/hunt-forge-ai": {
+      "additions": 0,
+      "commits": 0,
+      "deletions": 0,
+      "head": "7e67ca60e506f8047c217f18873adb2697187fd0"
+    },
     "falleco/interactive-storyteller": {
       "additions": 47638,
       "commits": 8,
       "deletions": 12700,
       "head": "cbd05dad58ee1c9727c3deea38855a79f6ed1a2e"
+    },
+    "falleco/learnlangai.com": {
+      "additions": 60394,
+      "commits": 13,
+      "deletions": 639,
+      "head": "45187ec36974eafde3358af52f6030a61cc9cdcb"
     },
     "falleco/m3u-downloader": {
       "additions": 701,
@@ -72,17 +120,47 @@
       "deletions": 0,
       "head": "923b688cfb0c99827d8988ff60b856fff63b9181"
     },
+    "falleco/mangaika": {
+      "additions": 2685,
+      "commits": 2,
+      "deletions": 16,
+      "head": "d1cf27fd0c68a2fccf92408738914cb88ebd688b"
+    },
     "falleco/opencode-config": {
       "additions": 14,
       "commits": 4,
       "deletions": 3,
       "head": "2172917ec5cf4f33333bcf1eb86aaeb99c9c3934"
     },
+    "falleco/orchestraitor": {
+      "additions": 0,
+      "commits": 0,
+      "deletions": 0,
+      "head": "cda23bd30059b94990c94cb69ae890d982dedd5e"
+    },
     "falleco/pluely": {
       "additions": 0,
       "commits": 0,
       "deletions": 0,
       "head": "840a6e0362dfcf735ab2a3b934767330b3902459"
+    },
+    "falleco/powerbox": {
+      "additions": 168,
+      "commits": 3,
+      "deletions": 4,
+      "head": "ceac65a4c5f1c9854761c2b99c5979b0b7243a0d"
+    },
+    "falleco/productama": {
+      "additions": 80966,
+      "commits": 1,
+      "deletions": 0,
+      "head": "f87f414c2924030acc3030ced9f8420524d9c7ca"
+    },
+    "falleco/punk-social-boost": {
+      "additions": 20958,
+      "commits": 9,
+      "deletions": 19575,
+      "head": "4450b5360281097b256853f756561fdf5ae03f29"
     },
     "falleco/react-native-firebase": {
       "additions": 27,
@@ -120,6 +198,12 @@
       "deletions": 0,
       "head": null
     },
+    "falleco/scrapunk": {
+      "additions": 1572,
+      "commits": 12,
+      "deletions": 916,
+      "head": "8a9c0f2c48bf13ec3a99f4fe6ac5fd9fbc882150"
+    },
     "falleco/scrapy-selenium": {
       "additions": 51,
       "commits": 3,
@@ -132,11 +216,29 @@
       "deletions": 1834,
       "head": "616aed6a96e821c33388fe7556fe81f982a8452c"
     },
+    "falleco/stacks": {
+      "additions": 25078,
+      "commits": 111,
+      "deletions": 589,
+      "head": "9fb5e0a511d0c92911731714440e54b56b52ef5e"
+    },
     "falleco/staff-hero": {
       "additions": 91198,
       "commits": 44,
       "deletions": 22278,
       "head": "e69023852ee6c3ff8415b17df27fe63d6a21c64c"
+    },
+    "falleco/staff-note-hero": {
+      "additions": 4,
+      "commits": 3,
+      "deletions": 4,
+      "head": "0220514689903a94db6daa4e8fafaeabb71df3bc"
+    },
+    "falleco/talos-template": {
+      "additions": 69500,
+      "commits": 22,
+      "deletions": 10926,
+      "head": "58a84dbe7974694caa504fee435e424f371a946f"
     },
     "falleco/unifi-ddns": {
       "additions": 0,
@@ -150,41 +252,29 @@
       "deletions": 0,
       "head": "b2a4c05b1f60703fd1dc15a7b464b39c34cf8560"
     },
+    "falleco/wondertales.ai": {
+      "additions": 0,
+      "commits": 0,
+      "deletions": 0,
+      "head": "9b2a84df9f7eaf31168493d8e23e84791fef77c0"
+    },
     "falleco/wondertalesai": {
       "additions": 2543,
       "commits": 5,
       "deletions": 1715,
       "head": "9a25c23161cd99ba632b28c263b9ac6603f2a8c1"
     },
-    "open-commander/open-commander": {
+    "falleco/yourpersonalteacher.ai": {
+      "additions": 78829,
+      "commits": 46,
+      "deletions": 4110,
+      "head": "14efb7bdd558aa25baab029e9853c312ee748322"
+    },
+    "falleco/zts": {
       "additions": 0,
       "commits": 0,
       "deletions": 0,
-      "head": "78d641b6a312b42dbd745df9778d1b287cbfa1cc"
-    },
-    "sophon-org/custom-usdc-bridge": {
-      "additions": 0,
-      "commits": 0,
-      "deletions": 0,
-      "head": "72b36f11fb6c901380836043a43c738c434d5c12"
-    },
-    "sophon-org/farming-contracts": {
-      "additions": 0,
-      "commits": 0,
-      "deletions": 0,
-      "head": "a69bda4fb9f75b40e178ea192480ab0e8bd307ef"
-    },
-    "sophon-org/hyperlane-monorepo": {
-      "additions": 0,
-      "commits": 0,
-      "deletions": 0,
-      "head": "39eef5fb66b83fce1328ec996e968fff36ddcc59"
-    },
-    "sophon-org/sophon-docs": {
-      "additions": 1109,
-      "commits": 6,
-      "deletions": 354,
-      "head": "908809282b92dda77d1872d8f408cf814214414f"
+      "head": "8b4a00676e1ee0bdf0375b0da1f52a710365b5d8"
     }
   }
 }
