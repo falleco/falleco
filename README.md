@@ -21,8 +21,8 @@
 
                     GitHub Stats
                     Account age: ......................... 14 years, 5 months, 10 days
-                    Repos: .................. 26 {Contributed to: pending} | Stars: 83
-                    Commits: ................................. pending | Followers: 14
-                    Lines of code: ........................................... pending
+                    Repos: ....................... 26 {Contributed to: 31} | Stars: 83
+                    Commits: ..................................... 106 | Followers: 14
+                    Lines of code: ....................... 126,168 (+186,410, -60,242)
 ```
 <!-- profile:end -->
