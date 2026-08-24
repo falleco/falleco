@@ -21,7 +21,8 @@ ROOT = Path(__file__).resolve().parent
 CACHE_FILE = ROOT / "cache" / "stats.json"
 CARD_WIDTH = 1000
 CARD_HEIGHT = 540
-DETAIL_X = 300
+ART_X = 41
+DETAIL_X = 340
 DETAIL_CHARS = 68
 
 ASCII_ART = [
@@ -299,7 +300,6 @@ def render_svg(stats: dict[str, Any], theme: dict[str, str]) -> str:
 
     def add_blank() -> None:
         nonlocal y
-        rows.append(f'<tspan x="{DETAIL_X}" y="{y}" class="cc">. </tspan>')
         y += step
 
     def add_section(title: str) -> None:
@@ -320,7 +320,7 @@ def render_svg(stats: dict[str, Any], theme: dict[str, str]) -> str:
     add_info("Role", "Software Developer")
     add_info("Company", "Rebelde Incógnito")
     add_info("Location", "Portugal")
-    add_info("Website", "https://israelcrisanto.com")
+    add_info("Website", "israelcrisanto.com")
     add_info("Motto", "Code great, live better.")
     add_blank()
     add_info("Languages.Programming", "TypeScript, JavaScript, Java, Python")
@@ -329,9 +329,9 @@ def render_svg(stats: dict[str, Any], theme: dict[str, str]) -> str:
     add_info("Hobbies", "building things, 3d printing, dogs")
     add_blank()
     add_section("Contact")
-    add_info("LinkedIn", "https://linkedin.com/in/crisanto")
-    add_info("X", "https://x.com/icrisanto")
-    add_info("GitHub", "https://github.com/falleco")
+    add_info("LinkedIn", "linkedin.com/in/crisanto")
+    add_info("X", "x.com/icrisanto")
+    add_info("GitHub", "github.com/falleco")
     add_blank()
     add_section("GitHub Stats")
     add_info("Account age", stats["age"])
@@ -360,7 +360,7 @@ def render_svg(stats: dict[str, Any], theme: dict[str, str]) -> str:
     art_step = 31
     art_start = (CARD_HEIGHT - art_step * len(ASCII_ART)) // 2 + 23
     art_rows = "\n".join(
-        f'<tspan x="30" y="{art_start + index * art_step}">{escape(line)}</tspan>'
+        f'<tspan x="{ART_X}" y="{art_start + index * art_step}">{escape(line)}</tspan>'
         for index, line in enumerate(ASCII_ART)
     )
 
