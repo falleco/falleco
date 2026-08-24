@@ -52,7 +52,12 @@ THEMES = {
 }
 
 
-def graphql(query: str, variables: dict[str, Any]) -> dict[str, Any]:
+def graphql(
+    query: str,
+    variables: dict[str, Any],
+    *,
+    allow_partial_forbidden: bool = False,
+) -> dict[str, Any]:
     if not TOKEN:
         raise RuntimeError("Set PROFILE_TOKEN or GITHUB_TOKEN before running profile.py")
 
@@ -73,8 +78,19 @@ def graphql(query: str, variables: dict[str, Any]) -> dict[str, Any]:
         details = error.read().decode(errors="replace")
         raise RuntimeError(f"GitHub API returned {error.code}: {details}") from error
 
-    if result.get("errors"):
-        raise RuntimeError(f"GitHub GraphQL error: {result['errors']}")
+    errors = result.get("errors", [])
+    can_use_partial_data = (
+        allow_partial_forbidden
+        and result.get("data") is not None
+        and all(error.get("type") == "FORBIDDEN" for error in errors)
+    )
+    if errors and not can_use_partial_data:
+        raise RuntimeError(f"GitHub GraphQL error: {errors}")
+    if errors:
+        print(
+            f"warning: skipped {len(errors)} inaccessible repository result(s)",
+            file=sys.stderr,
+        )
     return result["data"]
 
 
@@ -122,9 +138,10 @@ def fetch_repositories(affiliations: list[str]) -> tuple[int, list[dict[str, Any
         data = graphql(
             query,
             {"login": USERNAME, "affiliations": affiliations, "cursor": cursor},
+            allow_partial_forbidden=True,
         )["user"]["repositories"]
         total = data["totalCount"]
-        repositories.extend(data["nodes"])
+        repositories.extend(node for node in data["nodes"] if node is not None)
         if not data["pageInfo"]["hasNextPage"]:
             return total, repositories
         cursor = data["pageInfo"]["endCursor"]
