@@ -1,3 +1,190 @@
 {
-  "repositories": {}
+  "repositories": {
+    "falleco/Adv360-Pro-ZMK": {
+      "additions": 0,
+      "commits": 0,
+      "deletions": 0,
+      "head": "e2c73a277d181bc08184c9c8d8c4eeb2c69bcf7a"
+    },
+    "falleco/Proxmox": {
+      "additions": 259,
+      "commits": 3,
+      "deletions": 129,
+      "head": "db4fab0ec2ce265323cdbb75caba4262c7954031"
+    },
+    "falleco/agent-twitter-client": {
+      "additions": 0,
+      "commits": 0,
+      "deletions": 0,
+      "head": "262d3016bc355567c8dafe4372c6b438ae59a400"
+    },
+    "falleco/clawpit": {
+      "additions": 0,
+      "commits": 0,
+      "deletions": 0,
+      "head": "e384a3c1d87caaf778c8802ad7fe771d8c7ff182"
+    },
+    "falleco/defi-demo": {
+      "additions": 0,
+      "commits": 0,
+      "deletions": 0,
+      "head": "10ae1de485f64469245ab8c894d6dc1eb73f8e13"
+    },
+    "falleco/dev3000": {
+      "additions": 0,
+      "commits": 0,
+      "deletions": 0,
+      "head": "ebccec134541795a4a76425be2666af492b9f48f"
+    },
+    "falleco/dotfiles": {
+      "additions": 13586,
+      "commits": 21,
+      "deletions": 5656,
+      "head": "257b6d5bf8e1ed89068b0ef22508fb6d6ec7d635"
+    },
+    "falleco/falleco": {
+      "additions": 480,
+      "commits": 3,
+      "deletions": 52,
+      "head": "e776544e631e56aba2f0581e43a627ebf49541a8"
+    },
+    "falleco/fusion360-mcp": {
+      "additions": 0,
+      "commits": 0,
+      "deletions": 0,
+      "head": "3545107ea79d69a9f43f62eee870deea096d9652"
+    },
+    "falleco/interactive-storyteller": {
+      "additions": 47638,
+      "commits": 8,
+      "deletions": 12700,
+      "head": "cbd05dad58ee1c9727c3deea38855a79f6ed1a2e"
+    },
+    "falleco/m3u-downloader": {
+      "additions": 701,
+      "commits": 1,
+      "deletions": 0,
+      "head": "d0948f7c344d15bbb5f0d2da7fb9159215aa09fc"
+    },
+    "falleco/m3u8-parser": {
+      "additions": 0,
+      "commits": 0,
+      "deletions": 0,
+      "head": "923b688cfb0c99827d8988ff60b856fff63b9181"
+    },
+    "falleco/opencode-config": {
+      "additions": 14,
+      "commits": 4,
+      "deletions": 3,
+      "head": "2172917ec5cf4f33333bcf1eb86aaeb99c9c3934"
+    },
+    "falleco/pluely": {
+      "additions": 0,
+      "commits": 0,
+      "deletions": 0,
+      "head": "840a6e0362dfcf735ab2a3b934767330b3902459"
+    },
+    "falleco/react-native-firebase": {
+      "additions": 27,
+      "commits": 4,
+      "deletions": 2,
+      "head": "519b65be1e05bc2d8550ed2a6d1a3246cfff5a27"
+    },
+    "falleco/react-native-godot": {
+      "additions": 5548,
+      "commits": 2,
+      "deletions": 15506,
+      "head": "cbd1bfa08b23c3e938fbbedf0473c189548fa44b"
+    },
+    "falleco/react-native-popup-dialog": {
+      "additions": 0,
+      "commits": 0,
+      "deletions": 0,
+      "head": "43eeba32d2f0b811dbdbc863efa6131e0537248e"
+    },
+    "falleco/react-native-sound": {
+      "additions": 0,
+      "commits": 0,
+      "deletions": 0,
+      "head": "1aa45f25c8c03ea5c17fac18564c3928bd023113"
+    },
+    "falleco/react-native-video": {
+      "additions": 0,
+      "commits": 0,
+      "deletions": 0,
+      "head": "250d25e1946e150ad998a14a5e652be01d4d0b57"
+    },
+    "falleco/react-native-video-notification": {
+      "additions": 0,
+      "commits": 0,
+      "deletions": 0,
+      "head": null
+    },
+    "falleco/scrapy-selenium": {
+      "additions": 51,
+      "commits": 3,
+      "deletions": 13,
+      "head": "56db4735bf2ba2296c3d8693b6eafd8c5681db42"
+    },
+    "falleco/solidity-exercise": {
+      "additions": 23256,
+      "commits": 2,
+      "deletions": 1834,
+      "head": "616aed6a96e821c33388fe7556fe81f982a8452c"
+    },
+    "falleco/staff-hero": {
+      "additions": 91198,
+      "commits": 44,
+      "deletions": 22278,
+      "head": "e69023852ee6c3ff8415b17df27fe63d6a21c64c"
+    },
+    "falleco/unifi-ddns": {
+      "additions": 0,
+      "commits": 0,
+      "deletions": 0,
+      "head": "9be7f752811596235c0df5a92ef0752bd1a597ee"
+    },
+    "falleco/voice": {
+      "additions": 0,
+      "commits": 0,
+      "deletions": 0,
+      "head": "b2a4c05b1f60703fd1dc15a7b464b39c34cf8560"
+    },
+    "falleco/wondertalesai": {
+      "additions": 2543,
+      "commits": 5,
+      "deletions": 1715,
+      "head": "9a25c23161cd99ba632b28c263b9ac6603f2a8c1"
+    },
+    "open-commander/open-commander": {
+      "additions": 0,
+      "commits": 0,
+      "deletions": 0,
+      "head": "78d641b6a312b42dbd745df9778d1b287cbfa1cc"
+    },
+    "sophon-org/custom-usdc-bridge": {
+      "additions": 0,
+      "commits": 0,
+      "deletions": 0,
+      "head": "72b36f11fb6c901380836043a43c738c434d5c12"
+    },
+    "sophon-org/farming-contracts": {
+      "additions": 0,
+      "commits": 0,
+      "deletions": 0,
+      "head": "a69bda4fb9f75b40e178ea192480ab0e8bd307ef"
+    },
+    "sophon-org/hyperlane-monorepo": {
+      "additions": 0,
+      "commits": 0,
+      "deletions": 0,
+      "head": "39eef5fb66b83fce1328ec996e968fff36ddcc59"
+    },
+    "sophon-org/sophon-docs": {
+      "additions": 1109,
+      "commits": 6,
+      "deletions": 354,
+      "head": "908809282b92dda77d1872d8f408cf814214414f"
+    }
+  }
 }
