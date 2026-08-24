@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="540" viewBox="0 0 1000 540" role="img" aria-labelledby="title desc">
+  <title id="title">Israel Crisanto GitHub profile</title>
+  <desc id="desc">Terminal-style profile card with GitHub statistics</desc>
+  <style>
+    @font-face {
+      src: local("Consolas"), local("Consolas Bold");
+      font-family: "ConsolasFallback";
+      font-display: swap;
+      size-adjust: 109%;
+    }
+    .key { fill: #953800; }
+    .value { fill: #0a3069; }
+    .addColor { fill: #1a7f37; }
+    .delColor { fill: #cf222e; }
+    .cc { fill: #c2cfde; }
+    text, tspan { white-space: pre; }
+  </style>
+  <rect width="1000" height="540" rx="15" fill="#f6f8fa"/>
+  <text font-family="ConsolasFallback, Consolas, monospace" font-size="24" fill="#24292f">
+<tspan x="30" y="122">⠀⠀⠀⠀⢀⣀⣤⣤⣤⣤⣄⡀⠀⠀⠀⠀</tspan>
+<tspan x="30" y="153">⠀⢀⣤⣾⣿⣾⣿⣿⣿⣿⣿⣿⣷⣄⠀⠀</tspan>
+<tspan x="30" y="184">⢠⣾⣿⢛⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⡀</tspan>
+<tspan x="30" y="215">⣾⣯⣷⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧</tspan>
+<tspan x="30" y="246">⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿</tspan>
+<tspan x="30" y="277">⣿⡿⠻⢿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠻⢿⡵</tspan>
+<tspan x="30" y="308">⢸⡇⠀⠀⠉⠛⠛⣿⣿⠛⠛⠉⠀⠀⣿⡇</tspan>
+<tspan x="30" y="339">⢸⣿⣀⠀⢀⣠⣴⡇⠹⣦⣄⡀⠀⣠⣿⡇</tspan>
+<tspan x="30" y="370">⠈⠻⠿⠿⣟⣿⣿⣦⣤⣼⣿⣿⠿⠿⠟⠀</tspan>
+<tspan x="30" y="401">⠀⠀⠀⠀⠸⡿⣿⣿⢿⡿⢿⠇⠀⠀⠀⠀</tspan>
+<tspan x="30" y="432">⠀⠀⠀⠀⠀⠀⠈⠁⠈⠁⠀⠀⠀⠀⠀⠀</tspan>
+  </text>
+  <text font-family="ConsolasFallback, Consolas, monospace" font-size="16" fill="#24292f">
+    <tspan x="300" y="28">crisanto@israel </tspan><tspan class="cc">--------------------------------------------------</tspan><tspan x="300" y="47" class="cc">. </tspan><tspan class="key">OS</tspan><tspan>:</tspan><tspan class="cc"> ............................................ </tspan><tspan class="value">macOS, iOS, Linux</tspan><tspan x="300" y="66" class="cc">. </tspan><tspan class="key">Role</tspan><tspan>:</tspan><tspan class="cc"> ......................................... </tspan><tspan class="value">Software Developer</tspan><tspan x="300" y="85" class="cc">. </tspan><tspan class="key">Company</tspan><tspan>:</tspan><tspan class="cc"> ....................................... </tspan><tspan class="value">Rebelde Incógnito</tspan><tspan x="300" y="104" class="cc">. </tspan><tspan class="key">Location</tspan><tspan>:</tspan><tspan class="cc"> ............................................... </tspan><tspan class="value">Portugal</tspan><tspan x="300" y="123" class="cc">. </tspan><tspan class="key">Website</tspan><tspan>:</tspan><tspan class="cc"> .............................. </tspan><tspan class="value">https://israelcrisanto.com</tspan><tspan x="300" y="142" class="cc">. </tspan><tspan class="key">Motto</tspan><tspan>:</tspan><tspan class="cc"> .................................. </tspan><tspan class="value">Code great, live better.</tspan><tspan x="300" y="161" class="cc">. </tspan><tspan x="300" y="180" class="cc">. </tspan><tspan class="key">Languages.Programming</tspan><tspan>:</tspan><tspan class="cc"> ...... </tspan><tspan class="value">TypeScript, JavaScript, Java, Python</tspan><tspan x="300" y="199" class="cc">. </tspan><tspan class="key">Languages.Systems</tspan><tspan>:</tspan><tspan class="cc"> ....................... </tspan><tspan class="value">Python, Lua, Shell, C++</tspan><tspan x="300" y="218" class="cc">. </tspan><tspan class="key">Focus</tspan><tspan>:</tspan><tspan class="cc"> ............................. </tspan><tspan class="value">AI, mobile, developer tooling</tspan><tspan x="300" y="237" class="cc">. </tspan><tspan class="key">Hobbies</tspan><tspan>:</tspan><tspan class="cc"> ...................... </tspan><tspan class="value">building things, 3d printing, dogs</tspan><tspan x="300" y="256" class="cc">. </tspan><tspan x="300" y="275">- Contact </tspan><tspan class="cc">---------------------------------------------------------</tspan><tspan x="300" y="294" class="cc">. </tspan><tspan class="key">LinkedIn</tspan><tspan>:</tspan><tspan class="cc"> ....................... </tspan><tspan class="value">https://linkedin.com/in/crisanto</tspan><tspan x="300" y="313" class="cc">. </tspan><tspan class="key">X</tspan><tspan>:</tspan><tspan class="cc"> ....................................... </tspan><tspan class="value">https://x.com/icrisanto</tspan><tspan x="300" y="332" class="cc">. </tspan><tspan class="key">GitHub</tspan><tspan>:</tspan><tspan class="cc"> ............................... </tspan><tspan class="value">https://github.com/falleco</tspan><tspan x="300" y="351" class="cc">. </tspan><tspan x="300" y="370">- GitHub Stats </tspan><tspan class="cc">----------------------------------------------------</tspan><tspan x="300" y="389" class="cc">. </tspan><tspan class="key">Account age</tspan><tspan>:</tspan><tspan class="cc"> ......................... </tspan><tspan class="value">14 years, 5 months, 10 days</tspan><tspan x="300" y="408" class="cc">. </tspan><tspan class="key">Repos</tspan><tspan>:</tspan><tspan class="cc"> ........................................................ </tspan><tspan class="value">26</tspan><tspan x="300" y="427" class="cc">. </tspan><tspan class="key">Contributed</tspan><tspan>:</tspan><tspan class="cc"> ............................................. </tspan><tspan class="value">pending</tspan><tspan x="300" y="446" class="cc">. </tspan><tspan class="key">Stars</tspan><tspan>:</tspan><tspan class="cc"> ........................................................ </tspan><tspan class="value">83</tspan><tspan x="300" y="465" class="cc">. </tspan><tspan class="key">Commits</tspan><tspan>:</tspan><tspan class="cc"> ................................................. </tspan><tspan class="value">pending</tspan><tspan x="300" y="484" class="cc">. </tspan><tspan class="key">Followers</tspan><tspan>:</tspan><tspan class="cc"> .................................................... </tspan><tspan class="value">14</tspan><tspan x="300" y="503" class="cc">. </tspan><tspan class="key">Lines of code</tspan><tspan>:</tspan><tspan class="cc"> ........................................... </tspan><tspan class="value">pending</tspan>
+  </text>
+</svg>

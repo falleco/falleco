@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Update the terminal-style profile block in README.md with GitHub stats."""
+"""Calculate GitHub stats and generate light/dark profile SVG cards."""
 
 from __future__ import annotations
 
@@ -8,6 +8,7 @@ import json
 import os
 import sys
 from datetime import datetime, timezone
+from html import escape
 from pathlib import Path
 from typing import Any
 from urllib.error import HTTPError
@@ -17,15 +18,12 @@ from urllib.request import Request, urlopen
 USERNAME = os.getenv("PROFILE_USERNAME", "falleco")
 TOKEN = os.getenv("PROFILE_TOKEN") or os.getenv("GITHUB_TOKEN")
 ROOT = Path(__file__).resolve().parent
-README = ROOT / "README.md"
 CACHE_FILE = ROOT / "cache" / "stats.json"
-START_MARKER = "<!-- profile:start -->"
-END_MARKER = "<!-- profile:end -->"
-DETAILS_COLUMN = 20
-BRAILLE_VISUAL_OFFSET = 2
-DETAILS_WIDTH = 66
+CARD_WIDTH = 1000
+CARD_HEIGHT = 540
+DETAIL_X = 300
+DETAIL_CHARS = 68
 
-# Compact skull adapted for the side-by-side layout.
 ASCII_ART = [
     "⠀⠀⠀⠀⢀⣀⣤⣤⣤⣤⣄⡀⠀⠀⠀⠀",
     "⠀⢀⣤⣾⣿⣾⣿⣿⣿⣿⣿⣿⣷⣄⠀⠀",
@@ -39,6 +37,27 @@ ASCII_ART = [
     "⠀⠀⠀⠀⠸⡿⣿⣿⢿⡿⢿⠇⠀⠀⠀⠀",
     "⠀⠀⠀⠀⠀⠀⠈⠁⠈⠁⠀⠀⠀⠀⠀⠀",
 ]
+
+THEMES = {
+    "dark_mode.svg": {
+        "background": "#161b22",
+        "text": "#c9d1d9",
+        "key": "#ffa657",
+        "value": "#a5d6ff",
+        "add": "#3fb950",
+        "delete": "#f85149",
+        "connector": "#616e7f",
+    },
+    "light_mode.svg": {
+        "background": "#f6f8fa",
+        "text": "#24292f",
+        "key": "#953800",
+        "value": "#0a3069",
+        "add": "#1a7f37",
+        "delete": "#cf222e",
+        "connector": "#c2cfde",
+    },
+}
 
 
 def graphql(query: str, variables: dict[str, Any]) -> dict[str, Any]:
@@ -124,12 +143,7 @@ def fetch_repository_contributions(
 ) -> dict[str, int]:
     owner, name = repository.split("/", 1)
     query = """
-    query(
-      $owner: String!
-      $name: String!
-      $author: ID!
-      $cursor: String
-    ) {
+    query($owner: String!, $name: String!, $author: ID!, $cursor: String) {
       repository(owner: $owner, name: $name) {
         defaultBranchRef {
           target {
@@ -243,89 +257,145 @@ def account_age(created_at: str) -> str:
     return f"{unit(years, 'year')}, {unit(months, 'month')}, {unit(days, 'day')}"
 
 
-def render_profile(stats: dict[str, Any]) -> str:
-    def format_number(value: Any) -> str:
-        return f"{value:,}" if isinstance(value, int) else str(value)
+def format_number(value: Any) -> str:
+    return f"{value:,}" if isinstance(value, int) else str(value)
 
+
+def svg_info_line(label: str, value: Any, x: int, y: int) -> str:
+    rendered_value = format_number(value)
+    prefix_length = len(label) + 3
+    dot_count = max(1, DETAIL_CHARS - prefix_length - len(rendered_value) - 2)
+    dots = " " + "." * dot_count + " "
+    return (
+        f'<tspan x="{x}" y="{y}" class="cc">. </tspan>'
+        f'<tspan class="key">{escape(label)}</tspan>'
+        f'<tspan>:</tspan>'
+        f'<tspan class="cc">{dots}</tspan>'
+        f'<tspan class="value">{escape(rendered_value)}</tspan>'
+    )
+
+
+def render_svg(stats: dict[str, Any], theme: dict[str, str]) -> str:
     additions = stats["additions"]
     deletions = stats["deletions"]
     if isinstance(additions, int) and isinstance(deletions, int):
-        lines_of_code = (
-            f"{additions - deletions:,} "
-            f"(+{additions:,}, -{deletions:,})"
+        net_lines = format_number(additions - deletions)
+        loc_value = (
+            f'<tspan class="value">{net_lines}</tspan> '
+            f'(<tspan class="addColor">+{format_number(additions)}</tspan>, '
+            f'<tspan class="delColor">-{format_number(deletions)}</tspan>)'
         )
     else:
-        lines_of_code = "pending"
+        loc_value = '<tspan class="value">pending</tspan>'
 
-    def detail_line(label: str, value: Any) -> str:
-        prefix = f"{label}:"
-        rendered_value = str(value)
-        available = DETAILS_WIDTH - len(prefix) - len(rendered_value)
-        if available < 3:
-            return f"{prefix} {rendered_value}"
-        return f"{prefix} {'.' * (available - 2)} {rendered_value}"
+    rows: list[str] = []
+    y = 28
+    step = 19
 
-    details = [
-        "crisanto@israel",
-        "----------------",
-        detail_line("OS", "macOS, iOS, Linux"),
-        detail_line("Role", "Software Developer"),
-        detail_line("Company", "Rebelde Incógnito"),
-        detail_line("Location", "Portugal"),
-        detail_line("Website", "https://israelcrisanto.com"),
-        detail_line("Motto", "Code great, live better."),
-        "",
-        detail_line("Languages.Programming", "TypeScript, JavaScript, Java, Python"),
-        detail_line("Languages.Systems", "Python, Lua, Shell, C++"),
-        detail_line("Focus", "AI, mobile, developer tooling"),
-        detail_line("Hobbies", "building things, 3d printing, dogs"),
-        "",
-        "Contact",
-        detail_line("LinkedIn", "https://linkedin.com/in/crisanto"),
-        detail_line("X", "https://x.com/icrisanto"),
-        detail_line("GitHub", "https://github.com/falleco"),
-        "",
-        "GitHub Stats",
-        detail_line("Account age", stats["age"]),
-        detail_line(
-            "Repos",
-            f"{format_number(stats['repos'])} "
-            f"{{Contributed to: {format_number(stats['contributed'])}}} | "
-            f"Stars: {format_number(stats['stars'])}",
-        ),
-        detail_line(
-            "Commits",
-            f"{format_number(stats['commits'])} | "
-            f"Followers: {format_number(stats['followers'])}",
-        ),
-        detail_line("Lines of code", lines_of_code),
-    ]
-    compact_art = [line.rstrip("⠀ ") for line in ASCII_ART]
-    height = max(len(compact_art), len(details))
-    art_top = (height - len(compact_art)) // 2
-    centered_art = (
-        [""] * art_top
-        + compact_art
-        + [""] * (height - art_top - len(compact_art))
+    def add_info(label: str, value: Any) -> None:
+        nonlocal y
+        rows.append(svg_info_line(label, value, DETAIL_X, y))
+        y += step
+
+    def add_blank() -> None:
+        nonlocal y
+        rows.append(f'<tspan x="{DETAIL_X}" y="{y}" class="cc">. </tspan>')
+        y += step
+
+    def add_section(title: str) -> None:
+        nonlocal y
+        separator = "-" * max(1, DETAIL_CHARS - len(title) - 4)
+        rows.append(
+            f'<tspan x="{DETAIL_X}" y="{y}">- {escape(title)} </tspan>'
+            f'<tspan class="cc">{separator}</tspan>'
+        )
+        y += step
+
+    rows.append(
+        f'<tspan x="{DETAIL_X}" y="{y}">crisanto@israel </tspan>'
+        f'<tspan class="cc">{"-" * 50}</tspan>'
     )
-    padded_details = details + [""] * (height - len(details))
-    lines = []
-    for art, detail in zip(centered_art, padded_details):
-        # GitHub renders Braille through a fallback font that is visually wider
-        # than its monospace font. Compensate where art and text share a line.
-        column = DETAILS_COLUMN - BRAILLE_VISUAL_OFFSET if art and detail else DETAILS_COLUMN
-        lines.append(f"{art:<{column}}{detail}".rstrip())
-    return f"{START_MARKER}\n```text\n" + "\n".join(lines) + f"\n```\n{END_MARKER}"
+    y += step
+    add_info("OS", "macOS, iOS, Linux")
+    add_info("Role", "Software Developer")
+    add_info("Company", "Rebelde Incógnito")
+    add_info("Location", "Portugal")
+    add_info("Website", "https://israelcrisanto.com")
+    add_info("Motto", "Code great, live better.")
+    add_blank()
+    add_info("Languages.Programming", "TypeScript, JavaScript, Java, Python")
+    add_info("Languages.Systems", "Python, Lua, Shell, C++")
+    add_info("Focus", "AI, mobile, developer tooling")
+    add_info("Hobbies", "building things, 3d printing, dogs")
+    add_blank()
+    add_section("Contact")
+    add_info("LinkedIn", "https://linkedin.com/in/crisanto")
+    add_info("X", "https://x.com/icrisanto")
+    add_info("GitHub", "https://github.com/falleco")
+    add_blank()
+    add_section("GitHub Stats")
+    add_info("Account age", stats["age"])
+    add_info("Repos", stats["repos"])
+    add_info("Contributed", stats["contributed"])
+    add_info("Stars", stats["stars"])
+    add_info("Commits", stats["commits"])
+    add_info("Followers", stats["followers"])
+
+    loc_label = "Lines of code"
+    loc_plain = (
+        f"{format_number(additions - deletions)} "
+        f"(+{format_number(additions)}, -{format_number(deletions)})"
+        if isinstance(additions, int) and isinstance(deletions, int)
+        else "pending"
+    )
+    loc_dots = " " + "." * max(
+        1, DETAIL_CHARS - len(loc_label) - len(loc_plain) - 5
+    ) + " "
+    rows.append(
+        f'<tspan x="{DETAIL_X}" y="{y}" class="cc">. </tspan>'
+        f'<tspan class="key">{loc_label}</tspan><tspan>:</tspan>'
+        f'<tspan class="cc">{loc_dots}</tspan>{loc_value}'
+    )
+
+    art_step = 31
+    art_start = (CARD_HEIGHT - art_step * len(ASCII_ART)) // 2 + 23
+    art_rows = "\n".join(
+        f'<tspan x="30" y="{art_start + index * art_step}">{escape(line)}</tspan>'
+        for index, line in enumerate(ASCII_ART)
+    )
+
+    return f'''<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="{CARD_WIDTH}" height="{CARD_HEIGHT}" viewBox="0 0 {CARD_WIDTH} {CARD_HEIGHT}" role="img" aria-labelledby="title desc">
+  <title id="title">Israel Crisanto GitHub profile</title>
+  <desc id="desc">Terminal-style profile card with GitHub statistics</desc>
+  <style>
+    @font-face {{
+      src: local("Consolas"), local("Consolas Bold");
+      font-family: "ConsolasFallback";
+      font-display: swap;
+      size-adjust: 109%;
+    }}
+    .key {{ fill: {theme['key']}; }}
+    .value {{ fill: {theme['value']}; }}
+    .addColor {{ fill: {theme['add']}; }}
+    .delColor {{ fill: {theme['delete']}; }}
+    .cc {{ fill: {theme['connector']}; }}
+    text, tspan {{ white-space: pre; }}
+  </style>
+  <rect width="{CARD_WIDTH}" height="{CARD_HEIGHT}" rx="15" fill="{theme['background']}"/>
+  <text font-family="ConsolasFallback, Consolas, monospace" font-size="24" fill="{theme['text']}">
+{art_rows}
+  </text>
+  <text font-family="ConsolasFallback, Consolas, monospace" font-size="16" fill="{theme['text']}">
+    {''.join(rows)}
+  </text>
+</svg>
+'''
 
 
-def update_readme(profile: str) -> None:
-    contents = README.read_text()
-    start = contents.find(START_MARKER)
-    end = contents.find(END_MARKER)
-    if start == -1 or end == -1 or end < start:
-        raise RuntimeError("README.md does not contain valid profile markers")
-    end += len(END_MARKER)
-    README.write_text(contents[:start] + profile + contents[end:])
+def write_svgs(stats: dict[str, Any]) -> None:
+    for filename, theme in THEMES.items():
+        (ROOT / filename).write_text(render_svg(stats, theme))
 
 
 def main() -> None:
@@ -343,7 +413,7 @@ def main() -> None:
         "followers": user["followers"]["totalCount"],
         **contribution_stats,
     }
-    update_readme(render_profile(stats))
+    write_svgs(stats)
     print(json.dumps(stats, indent=2), file=sys.stderr)
 
 
