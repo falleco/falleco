@@ -393,6 +393,7 @@ def render_svg(stats: dict[str, Any], theme: dict[str, str]) -> str:
     .skull-blink {{
       opacity: 0;
       animation: skull-blink 10s steps(1, end) infinite;
+      animation-delay: -7s;
     }}
     @keyframes skull-blink {{
       0%, 88%, 92%, 97%, 100% {{ opacity: 0; }}
