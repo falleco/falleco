@@ -21,6 +21,7 @@ TOKEN = os.getenv("PROFILE_TOKEN") or os.getenv("GITHUB_TOKEN")
 ROOT = Path(__file__).resolve().parent
 CACHE_FILE = ROOT / "cache" / "stats.json"
 SKULL_IMAGE = ROOT / "assets" / "graffiti-skull-pirate.png"
+SKULL_BLINK_IMAGE = ROOT / "assets" / "graffiti-skull-pirate-blink.png"
 CARD_WIDTH = 1130
 CARD_HEIGHT = 540
 DETAIL_X = 440
@@ -284,8 +285,8 @@ def svg_info_line(label: str, value: Any, x: int, y: int) -> str:
     )
 
 
-def skull_data_uri() -> str:
-    encoded = base64.b64encode(SKULL_IMAGE.read_bytes()).decode("ascii")
+def image_data_uri(path: Path) -> str:
+    encoded = base64.b64encode(path.read_bytes()).decode("ascii")
     return f"data:image/png;base64,{encoded}"
 
 
@@ -370,7 +371,8 @@ def render_svg(stats: dict[str, Any], theme: dict[str, str]) -> str:
         f'<tspan class="cc">{loc_dots}</tspan>{loc_value}'
     )
 
-    skull_image = skull_data_uri()
+    skull_image = image_data_uri(SKULL_IMAGE)
+    skull_blink_image = image_data_uri(SKULL_BLINK_IMAGE)
 
     return f'''<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="{CARD_WIDTH}" height="{CARD_HEIGHT}" viewBox="0 0 {CARD_WIDTH} {CARD_HEIGHT}" role="img" aria-labelledby="title desc">
@@ -388,10 +390,22 @@ def render_svg(stats: dict[str, Any], theme: dict[str, str]) -> str:
     .addColor {{ fill: {theme['add']}; }}
     .delColor {{ fill: {theme['delete']}; }}
     .cc {{ fill: {theme['connector']}; }}
+    .skull-blink {{
+      opacity: 0;
+      animation: skull-blink 10s steps(1, end) infinite;
+    }}
+    @keyframes skull-blink {{
+      0%, 88%, 92%, 97%, 100% {{ opacity: 0; }}
+      89%, 91%, 94%, 96% {{ opacity: 1; }}
+    }}
+    @media (prefers-reduced-motion: reduce) {{
+      .skull-blink {{ animation: none; opacity: 0; }}
+    }}
     text, tspan {{ white-space: pre; }}
   </style>
   <rect width="{CARD_WIDTH}" height="{CARD_HEIGHT}" rx="15" fill="{theme['background']}"/>
   <image href="{skull_image}" x="{SKULL_X}" y="{SKULL_Y}" width="{SKULL_WIDTH}" height="{SKULL_HEIGHT}" preserveAspectRatio="xMidYMid meet"/>
+  <image class="skull-blink" href="{skull_blink_image}" x="{SKULL_X}" y="{SKULL_Y}" width="{SKULL_WIDTH}" height="{SKULL_HEIGHT}" preserveAspectRatio="xMidYMid meet"/>
   <text font-family="ConsolasFallback, Consolas, monospace" font-size="16" fill="{theme['text']}">
     {''.join(rows)}
   </text>
