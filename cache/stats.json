@@ -76,7 +76,7 @@
       "additions": 2265,
       "commits": 14,
       "deletions": 1178,
-      "head": "e81cdf6e9f9bc34d7a3c5c97f7c658b6c55205e4"
+      "head": "884490be22964d626bc653951206b27010ff8cab"
     },
     "falleco/fusion360-mcp": {
       "additions": 0,
@@ -275,30 +275,6 @@
       "commits": 0,
       "deletions": 0,
       "head": "78d641b6a312b42dbd745df9778d1b287cbfa1cc"
-    },
-    "sophon-org/custom-usdc-bridge": {
-      "additions": 0,
-      "commits": 0,
-      "deletions": 0,
-      "head": "72b36f11fb6c901380836043a43c738c434d5c12"
-    },
-    "sophon-org/farming-contracts": {
-      "additions": 0,
-      "commits": 0,
-      "deletions": 0,
-      "head": "a69bda4fb9f75b40e178ea192480ab0e8bd307ef"
-    },
-    "sophon-org/hyperlane-monorepo": {
-      "additions": 0,
-      "commits": 0,
-      "deletions": 0,
-      "head": "39eef5fb66b83fce1328ec996e968fff36ddcc59"
-    },
-    "sophon-org/sophon-docs": {
-      "additions": 1109,
-      "commits": 6,
-      "deletions": 354,
-      "head": "1318af7fc3ea8676f88a1c58baafea6bfa5b32fc"
     }
   }
 }
